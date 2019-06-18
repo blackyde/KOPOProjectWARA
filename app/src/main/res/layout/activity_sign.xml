@@ -6,13 +6,210 @@
     android:layout_height="match_parent"
     tools:context=".SignActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="10"
+        android:orientation="vertical"
+        android:background="#F5E4F7"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:weightSum="10"
+            >
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="아이디"
+                android:layout_marginRight="10dp"
+                android:textSize="20dp"
+                android:layout_weight="3"/>
+
+            <EditText
+                android:id="@+id/inputWishId"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:hint="ID를 입력하세요"
+                android:background="#FFFFFF"
+                android:paddingLeft="15dp"
+                android:inputType="text"
+                android:layout_weight="6"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            >
+
+            <Button
+                android:id="@+id/btnCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="id 중복 확인"
+                android:textSize="20dp"
+                android:padding="10dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:weightSum="10"
+            >
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="비밀번호"
+                android:layout_marginRight="10dp"
+                android:textSize="20dp"
+                android:layout_weight="3"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:hint="비밀번호를 입력하세요"
+                android:background="#FFFFFF"
+                android:paddingLeft="15dp"
+                android:inputType="textPassword"
+                android:layout_weight="6"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:weightSum="10"
+            >
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="비밀번호확인"
+                android:layout_marginRight="10dp"
+                android:textSize="20dp"
+                android:layout_weight="3"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:hint="비밀번호를 입력하세요"
+                android:background="#FFFFFF"
+                android:paddingLeft="15dp"
+                android:inputType="textPassword"
+                android:layout_weight="6"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:weightSum="10"
+            >
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="전화번호"
+                android:layout_marginRight="10dp"
+                android:textSize="20dp"
+                android:layout_weight="3"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:hint="전화번호를 입력하세요"
+                android:background="#FFFFFF"
+                android:paddingLeft="15dp"
+                android:inputType="phone"
+                android:layout_weight="6"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:weightSum="10"
+            >
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="이메일"
+                android:layout_marginRight="10dp"
+                android:textSize="20dp"
+                android:layout_weight="3"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:hint="이메일을 입력하세요"
+                android:background="#FFFFFF"
+                android:paddingLeft="15dp"
+                android:inputType="textEmailAddress"
+                android:layout_weight="6"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            >
+
+            <Button
+                android:id="@+id/btnSign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="가입"
+                android:textSize="20dp"
+                android:layout_marginRight="50dp"
+                android:padding="10dp"
+                />
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="취소"
+                android:textSize="20dp"
+                android:padding="10dp"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

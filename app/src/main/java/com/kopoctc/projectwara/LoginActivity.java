@@ -26,6 +26,7 @@ public class LoginActivity extends Activity {
         setContentView(R.layout.activity_login);
 
         Button login = (Button)findViewById(R.id.btnLogin);
+        Button signUp = (Button)findViewById(R.id.btnSignUp);
 
         login.setOnClickListener(new View.OnClickListener() {
 
@@ -51,6 +52,17 @@ public class LoginActivity extends Activity {
                 } catch (Exception e) {
 
                 }
+            }
+        });
+
+        signUp.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(getApplicationContext(), SignActivity.class);
+
+                startActivity(intent);
             }
         });
     }

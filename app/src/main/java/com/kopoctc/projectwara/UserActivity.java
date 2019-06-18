@@ -1,10 +1,10 @@
 package com.kopoctc.projectwara;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 public class UserActivity extends Activity {
 
@@ -13,12 +13,13 @@ public class UserActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
 
-        Button btnMain = (Button)findViewById(R.id.btnMain);
+        Button result = (Button)findViewById(R.id.btnResult);
 
-        btnMain.setOnClickListener(new View.OnClickListener() {
+        result.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "개발중", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
+                startActivity(intent);
             }
         });
     }

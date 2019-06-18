@@ -1,6 +1,7 @@
 package com.kopoctc.projectwara;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,7 +19,8 @@ public class MainActivity extends Activity {
         btnMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "개발중", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), UserActivity.class);
+                startActivity(intent);
             }
         });
     }

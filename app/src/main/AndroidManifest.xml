@@ -17,6 +17,10 @@
             android:name="com.kakao.sdk.AppKey"
             android:value="201222183a48ebebbe4b64ed493c1534"/>
 
+        <meta-data
+            android:name="com.naver.maps.map.CLIENT_ID"
+            android:value="bf1azr20cx" />
+
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -38,6 +42,10 @@
         </activity>
 
         <activity android:name=".ResultActivity">
+
+        </activity>
+
+        <activity android:name=".ResultNaverActivity">
 
         </activity>
     </application>

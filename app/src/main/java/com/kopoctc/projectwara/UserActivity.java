@@ -18,6 +18,16 @@ public class UserActivity extends Activity {
         result.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ResultNaverActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button test = (Button)findViewById(R.id.btnTest);
+
+        test.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
                 startActivity(intent);
             }

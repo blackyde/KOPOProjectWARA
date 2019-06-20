@@ -87,6 +87,7 @@
                 android:layout_weight="3"/>
 
             <EditText
+                android:id="@+id/inputWishPw"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:hint="비밀번호를 입력하세요"
@@ -115,6 +116,7 @@
                 android:layout_weight="3"/>
 
             <EditText
+                android:id="@+id/inputWishPw2"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:hint="비밀번호를 입력하세요"
@@ -134,7 +136,6 @@
             >
 
             <TextView
-
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="전화번호"
@@ -143,6 +144,7 @@
                 android:layout_weight="3"/>
 
             <EditText
+                android:id="@+id/inputPhone"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:hint="전화번호를 입력하세요"
@@ -162,7 +164,6 @@
             >
 
             <TextView
-
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="이메일"
@@ -171,6 +172,7 @@
                 android:layout_weight="3"/>
 
             <EditText
+                android:id="@+id/inputEmail"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:hint="이메일을 입력하세요"

@@ -89,7 +89,7 @@ public class SignActivity extends Activity {
                     Toast.makeText(getApplicationContext(), "패스워드가 서로 다릅니다.", Toast.LENGTH_SHORT).show();
                 }
             }
-            
+
         });
 
         cancel.setOnClickListener(view -> onBackPressed());

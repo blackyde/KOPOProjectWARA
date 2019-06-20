@@ -2,8 +2,12 @@ package com.kopoctc.projectwara;
 
 import android.app.Activity;
 import android.content.Intent;
+//import android.content.pm.PackageInfo;
+//import android.content.pm.PackageManager;
+//import android.content.pm.Signature;
 import android.os.AsyncTask;
 import android.os.Bundle;
+//import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +21,7 @@ import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+//import java.security.MessageDigest;
 
 public class LoginActivity extends Activity {
 
@@ -24,6 +29,19 @@ public class LoginActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+//        try{
+//            PackageInfo info = getPackageManager().getPackageInfo(getPackageName(), PackageManager.GET_SIGNATURES);
+//            for (Signature signature : info.signatures) {
+//                MessageDigest md;
+//                md = MessageDigest.getInstance("SHA");
+//                md.update(signature.toByteArray());
+//                String key = new String(Base64.encode(md.digest(), 0));
+//                Log.d("Hash key:", "!!!!!!!"+key+"!!!!!!");
+//            }
+//        } catch (Exception e){
+//            Log.e("name not found", e.toString());
+//        }
 
         Button login = (Button)findViewById(R.id.btnLogin);
         Button signUp = (Button)findViewById(R.id.btnSignUp);

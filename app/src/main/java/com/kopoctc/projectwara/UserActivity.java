@@ -28,8 +28,8 @@ public class UserActivity extends Activity {
         test.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
+//                startActivity(intent);
             }
         });
     }

@@ -65,31 +65,31 @@ public class SignActivity extends Activity {
             if(wishPw2.getBytes().length <= 0) bool = false;
             if(phone.getBytes().length <= 0) bool = false;
             if(email.getBytes().length <= 0) bool = false;
+            if(bool == false) {
+                Toast.makeText(getApplicationContext(), "모든 항목을 입력해주세요", Toast.LENGTH_SHORT).show();
+            } else {
+                if(wishPw.equals(wishPw2) && bool) {
+                    try {
+                        String result;
+                        SignActivity.SignTask task = new SignActivity.SignTask();
 
-            if(bool && wishPw.equals(wishPw2)) {
-                try {
-                    String result;
-                    SignActivity.SignTask task = new SignActivity.SignTask();
+                        result = task.execute(wishId, wishPw, phone, email).get();
+                        Log.i("리턴 값", result);
 
-                    result = task.execute(wishId, wishPw, phone, email).get();
-                    Log.i("리턴 값", result);
+                        Toast.makeText(getApplicationContext(), "가입 되었습니다.", Toast.LENGTH_SHORT).show();
 
-                    Toast.makeText(getApplicationContext(), "가입 되었습니다.", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(intent);
+                        finish();
 
-                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                    startActivity(intent);
-                    finish();
+                    } catch (Exception e) {
 
-                } catch (Exception e) {
+                    }
+                } else {
                     Toast.makeText(getApplicationContext(), "패스워드가 서로 다릅니다.", Toast.LENGTH_SHORT).show();
                 }
-            } else {
-                Toast.makeText(getApplicationContext(), "모든 항목을 입력해주세요", Toast.LENGTH_SHORT).show();
             }
-
-
-
-
+            
         });
 
         cancel.setOnClickListener(view -> onBackPressed());

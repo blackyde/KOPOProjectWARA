@@ -46,42 +46,34 @@ public class LoginActivity extends Activity {
         Button login = (Button)findViewById(R.id.btnLogin);
         Button signUp = (Button)findViewById(R.id.btnSignUp);
 
-        login.setOnClickListener(new View.OnClickListener() {
+        login.setOnClickListener(view -> {
+            try {
+                String result;
+                CustomTask task = new CustomTask();
+                EditText inputId = (EditText)findViewById(R.id.inputId);
+                EditText inputPw = (EditText)findViewById(R.id.inputPw);
+                String id = inputId.getText().toString();
+                String pwd = inputPw.getText().toString();
+                result = task.execute(id, pwd).get();
+                Log.i("리턴 값", result);
+                if(result.equals("true")) {
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
 
-            @Override
-            public void onClick(View view) {
-                try {
-                    String result;
-                    CustomTask task = new CustomTask();
-                    EditText inputId = (EditText)findViewById(R.id.inputId);
-                    EditText inputPw = (EditText)findViewById(R.id.inputPw);
-                    String id = inputId.getText().toString();
-                    String pwd = inputPw.getText().toString();
-                    result = task.execute(id, pwd).get();
-                    Log.i("리턴 값", result);
-                    if(result.equals("true")) {
-                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-
-                        startActivity(intent);
-                    } else {
-                        Toast.makeText(getApplicationContext(), "ID 나 PW 가 틀렸습니다.", Toast.LENGTH_SHORT).show();
-                    }
-
-                } catch (Exception e) {
-
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(getApplicationContext(), "ID 나 PW 가 틀렸습니다.", Toast.LENGTH_SHORT).show();
                 }
+
+            } catch (Exception e) {
+
             }
         });
 
-        signUp.setOnClickListener(new View.OnClickListener() {
+        signUp.setOnClickListener(view -> {
 
-            @Override
-            public void onClick(View view) {
+            Intent intent = new Intent(getApplicationContext(), SignActivity.class);
 
-                Intent intent = new Intent(getApplicationContext(), SignActivity.class);
-
-                startActivity(intent);
-            }
+            startActivity(intent);
         });
     }
 
